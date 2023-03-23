@@ -9,6 +9,11 @@ import { ContentComponent } from './layouts/content/content.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { CadastramentoComponent } from './pages/cadastramento/cadastramento.component';
+import { RecuperacaoComponent } from './pages/recuperacao/recuperacao.component';
+import { HomeComponent } from './pages/home/home.component';
+import { MainTableComponent } from './components/main-table/main-table.component';
+import{HttpClientModule} from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -16,14 +21,18 @@ import { CadastramentoComponent } from './pages/cadastramento/cadastramento.comp
     FullComponent,
     ContentComponent,
     LoginComponent,
-    CadastramentoComponent
+    CadastramentoComponent,
+    RecuperacaoComponent,
+    HomeComponent,
+    MainTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

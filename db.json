@@ -3,22 +3,48 @@
     {
       "id": 1,
       "nome": "Modelo 1",
-      "colecao": 1
+      "colecao": 1,
+      "responsavel": "Alguém",
+      "tipo":"Camiseta",
+      "bordado": false,
+      "estampa": true
     },
     {
       "id": 2,
       "nome": "Modelo 2",
-      "colecao": 1
+      "colecao": 2,
+      "responsavel":"Alguém",
+      "tipo": "Bíquini",
+      "bordado": true,
+      "estampa": true
     }
   ],
   "colecoes": [
     {
       "id": 1,
-      "nome": "Coleção 1"
+      "nome": "Menina Mulher", 
+      "responsavel": "Audaces",
+      "marca": "Nike",
+      "ano": 2010,
+      "season":"Inverno",
+      "Orçamento": 9500
     },
     {
       "id": 2,
-      "nome": "Coleção 2"
+      "nome": "Academia", 
+      "responsavel": "Audaces",
+      "marca": "Reebok",
+      "ano": 2020,
+      "season":"Verão",
+      "Orçamento": 9800
     }
-  ]
+  ],
+  "users":[{
+    "id": 1,
+    "nome": "Joãozinho",
+    "empresa": "Joãozinho S. A.",
+    "cnpj": 73252786000145,
+    "email": "joaozinho@joaozinho.com",
+    "senha": "********"
+  }]
 }
