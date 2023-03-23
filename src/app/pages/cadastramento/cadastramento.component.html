@@ -1,0 +1,29 @@
+<div class="manual">
+    <img src="../../../assets/Fill-51.svg" alt="">
+    <h3>Sign Up</h3>
+     <p>Insira seus dados para criar uma conta</p>
+    <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div>
+        <input type="text" formControlName="nome">
+      </div>
+      <div>
+        <input type="text" formControlName="empresa">
+      </div>
+      <div>
+        <input type="number" formControlName="cnpj">
+      </div>
+        <div>
+        <input type="email" formControlName="email" />
+      </div>
+      <div>
+        <input type="password" formControlName="senha" />
+      </div>
+      <div>
+        <input type="password" formControlName="confirmacao">
+      </div>
+      <button type="submit" class="btn more">Entrar</button>
+    </form>
+    <p>Esqueceu sua senha?<button (click)="redefinirSenha()">Redefinir senha</button></p>
+    <p>Não possui cadastro?<button (click)="cadastrarUsuario()">Cadastre-se</button></p>
+</div>
+
