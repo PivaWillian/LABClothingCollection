@@ -1,10 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ColecoesService } from 'src/app/services/colecoes.service';
+import { ModelosService } from 'src/app/services/modelos.service';
+import { Colecoes } from 'src/app/tipos/colecoes';
+import { Modelos } from 'src/app/tipos/modelos';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+
+  models!: Modelos[];
+  collections!: Colecoes[];
+
+  constructor(private colecoesService:ColecoesService, private modelosService:ModelosService){}
+
+  ngOnInit(): void {
+    this.modelosService.getColecoes().subscribe(data => {
+      this.models = data;
+      console.log(this.models)
+    });
+
+    this.colecoesService.getColecoes().subscribe(data =>{
+      this.collections = data;
+      console.log(this.collections)
+    });
+  }
+
 
 }

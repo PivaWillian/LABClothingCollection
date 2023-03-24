@@ -11,7 +11,23 @@ export class UsersService {
   
   constructor(private http:HttpClient) { }
 
-  getUsers(): Observable<Users[]> {
+  getColecoes(): Observable<Users[]>{
     return this.http.get<Users[]>(environment.Users_Path);
+  }
+
+  getColecao(id:number):Observable<Users>{
+    return this.http.get<Users>(`${environment.Users_Path}/${id}`);
+  }
+
+  editColecao(colecao:Users):Observable<Users>{
+    return this.http.put<Users>(`${environment.Users_Path}/colecoes/${colecao.id}`, colecao);
+  }
+
+  setColecao(colecao:Users):Observable<Users>{
+    return this.http.post<Users>(`${environment.Users_Path}/${colecao.id}`, colecao);
+  }
+
+  deleteColecao(id:Number):Observable<Users>{
+    return  this.http.delete<Users>(`${environment.Users_Path}/colecoes/${id}`);
   }
 }

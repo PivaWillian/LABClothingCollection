@@ -39,12 +39,14 @@
       "Orçamento": 9800
     }
   ],
-  "users":[{
+  "users":[
+    {
     "id": 1,
     "nome": "Joãozinho",
     "empresa": "Joãozinho S. A.",
     "cnpj": 73252786000145,
     "email": "joaozinho@joaozinho.com",
     "senha": "********"
-  }]
+    }
+  ]
 }
