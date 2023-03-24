@@ -5,5 +5,5 @@ export interface Colecoes {
     "marca": string,
     "ano": number,
     "season":string,
-    "Orçamento": number
+    "orcamento": number
 }

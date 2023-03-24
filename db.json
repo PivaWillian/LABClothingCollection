@@ -27,7 +27,7 @@
       "marca": "Nike",
       "ano": 2010,
       "season":"Inverno",
-      "Orçamento": 9500
+      "orcamento": 9500
     },
     {
       "id": 2,
@@ -36,7 +36,7 @@
       "marca": "Reebok",
       "ano": 2020,
       "season":"Verão",
-      "Orçamento": 9800
+      "orcamento": 9800
     }
   ],
   "users":[
