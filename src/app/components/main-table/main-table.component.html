@@ -6,10 +6,10 @@
         <th>Modelos</th>
         <th>Orçamentos</th>
     </tr>
-    <tr *ngFor="let item of colecoes| slice:0:5">
+    <tr *ngFor="let item of novaColecao | slice:0:5">
         <td>{{item.nome}}</td>
         <td>{{item.responsavel}}</td>
-        <td></td>
+        <td>{{item.qtdModelos}}</td>
         <td>{{item.orcamento}}</td>
     </tr>
 </table>

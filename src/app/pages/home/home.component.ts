@@ -19,12 +19,10 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
     this.modelosService.getColecoes().subscribe(data => {
       this.models = data;
-      console.log(this.models)
     });
 
     this.colecoesService.getColecoes().subscribe(data =>{
       this.collections = data;
-      console.log(this.collections)
     });
   }
 
