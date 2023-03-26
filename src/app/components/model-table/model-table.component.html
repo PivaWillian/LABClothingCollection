@@ -1,0 +1,38 @@
+<div class="manual">
+    <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div>
+        <input type="text" formControlName="nomeModelo" placeholder="Nome do Modelo">
+      </div>
+      <div>
+        <input type="text" formControlName="tipoModelo" placeholder="Tipo do Modelo">
+      </div>
+      <div>
+        <label>Selecionar Coleção</label>
+        <select formControName="selecionarColecao">
+            <option value="1">Coleção 1</option>
+            <option value="2">Coleção 2</option>
+        </select>
+       </div>
+        <div>
+        <input type="text" formControlName="responsavelModelo" placeholder="Responsável pelo modelo" />
+      </div>
+      <div>
+        <p>Possui bordado?</p>
+        <label>Sim</label>
+        <input type="radio" formControlName="bordado" value="true">
+        <label>Não</label>
+        <input type="radio" formControlName="bordado" value="false">
+        </div>
+      <div>
+        <p>Possui estampa?</p>
+        <label>Sim</label>
+        <input type="radio" value="true" formControlName="estampa">
+        <label>Não</label>
+        <input type="radio" formControlName="estampa" value="false">
+      </div>
+      
+      <button (click)="cancela()">Cancelar</button>
+      <button type="submit" class="btn">Salvar</button>
+    </form>
+</div>
+

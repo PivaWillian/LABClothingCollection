@@ -1,0 +1,26 @@
+<div class="manual">
+    <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div>
+        <input type="text" formControlName="nomeColecao" placeholder="Nome da Coleção">
+      </div>
+      <div>
+        <input type="text" formControlName="responsavel" placeholder="Responsável pela coleção">
+      </div>
+      <div>
+        <input type="text" formControlName="estacao" placeholder="Para qual estação">
+      </div>
+        <div>
+        <input type="text" formControlName="marca" placeholder="Para qual marca está criando?" />
+      </div>
+      <div>
+        <input type="number" formControlName="orcamento" placeholder="Qual o orçamento desta coleção?"/>
+      </div>
+      <div>
+        <input type="number" formControlName="anoLancamento" placeholder="Ano de lançamento">
+      </div>
+      <img src="" alt="roupas opções">
+      <button (click)="cancela()">Cancelar</button>
+      <button type="submit" class="btn">Salvar</button>
+    </form>
+</div>
+

@@ -12,7 +12,13 @@ import { CadastramentoComponent } from './pages/cadastramento/cadastramento.comp
 import { RecuperacaoComponent } from './pages/recuperacao/recuperacao.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainTableComponent } from './components/main-table/main-table.component';
-import{HttpClientModule} from '@angular/common/http'
+import{HttpClientModule} from '@angular/common/http';
+import { ColecoesComponent } from './pages/colecoes/colecoes.component';
+import { CollectionTableComponent } from './components/collection-table/collection-table.component';
+import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
+import { EditarColecaoComponent } from './pages/editar-colecao/editar-colecao.component';
+import { CriarModeloComponent } from './pages/criar-modelo/criar-modelo.component';
+import { ModelTableComponent } from './components/model-table/model-table.component'
 
 
 @NgModule({
@@ -24,7 +30,13 @@ import{HttpClientModule} from '@angular/common/http'
     CadastramentoComponent,
     RecuperacaoComponent,
     HomeComponent,
-    MainTableComponent
+    MainTableComponent,
+    ColecoesComponent,
+    CollectionTableComponent,
+    CriarColecaoComponent,
+    EditarColecaoComponent,
+    CriarModeloComponent,
+    ModelTableComponent
   ],
   imports: [
     BrowserModule,
