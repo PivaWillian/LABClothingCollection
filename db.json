@@ -17,6 +17,15 @@
       "tipo": "Bíquini",
       "bordado": true,
       "estampa": true
+    },
+    {
+      "nomeModelo": "willian",
+      "tipoModelo": "calcinha",
+      "selecionarColecao": "",
+      "responsavelModelo": "yan boiola",
+      "bordado": "true",
+      "estampa": "false",
+      "id": 3
     }
   ],
   "colecoes": [
@@ -37,6 +46,15 @@
       "ano": 2020,
       "season": "Verão",
       "orcamento": 9800
+    },
+    {
+      "nomeColecao": "willian",
+      "responsavel": "joaozinho",
+      "estacao": "inferno",
+      "marca": "tigor",
+      "orcamento": 10000,
+      "anoLancamento": 2089,
+      "id": 3
     }
   ],
   "users": [
@@ -49,12 +67,21 @@
       "senha": "********"
     },
     {
-      "nome": "fdasfdasfasdf",
-      "empresa": "fasdfdsafsdaf",
-      "cnpj": 5435643654654766000,
-      "email": "fgfsdgfdsgsdgsdf",
-      "senha": "gfsdgsdfgdfsg",
+      "nome": "WILIAN",
+      "empresa": "WILIAN",
+      "cnpj": 94999999999999,
+      "email": "willian.piva@gmail.com",
+      "senha": "00000000",
       "id": 2
+    },
+    {
+      "nome": "willian",
+      "empresa": "willian ",
+      "cnpj": 939999999999393,
+      "email": "willian.piva@gmail.com",
+      "senha": "01010101",
+      "confirmacao": "01010101",
+      "id": 3
     }
   ]
 }

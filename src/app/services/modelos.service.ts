@@ -11,23 +11,23 @@ export class ModelosService {
 
   constructor(private http:HttpClient) { }
 
-  getColecoes(): Observable<Modelos[]>{
+  getModelos(): Observable<Modelos[]>{
     return this.http.get<Modelos[]>(environment.Modelos_Path);
   }
 
-  getColecao(id:number):Observable<Modelos>{
+  getModelo(id:number):Observable<Modelos>{
     return this.http.get<Modelos>(`${environment.Modelos_Path}/${id}`);
   }
 
-  editColecao(colecao:Modelos):Observable<Modelos>{
+  editModelo(colecao:Modelos):Observable<Modelos>{
     return this.http.put<Modelos>(`${environment.Modelos_Path}/colecoes/${colecao.id}`, colecao);
   }
 
-  setColecao(colecao:Modelos):Observable<Modelos>{
-    return this.http.post<Modelos>(`${environment.Modelos_Path}/${colecao.id}`, colecao);
+  setModelo(colecao:Modelos):Observable<Modelos>{
+    return this.http.post<Modelos>(`${environment.Modelos_Path}`, colecao);
   }
 
-  deleteColecao(id:Number):Observable<Modelos>{
+  deleteModelo(id:Number):Observable<Modelos>{
     return  this.http.delete<Modelos>(`${environment.Modelos_Path}/colecoes/${id}`);
   }
 }

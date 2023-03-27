@@ -1,15 +1,40 @@
-<table>
-    <h3>Maiores Orçamentos</h3>
-    <tr>
-        <th>Coleção</th>
-        <th>Responsável</th>
-        <th>Modelos</th>
-        <th>Orçamentos</th>
-    </tr>
-    <tr *ngFor="let item of novaColecao | slice:0:5">
-        <td>{{item.nome}}</td>
-        <td>{{item.responsavel}}</td>
-        <td>{{item.qtdModelos}}</td>
-        <td>{{item.orcamento}}</td>
-    </tr>
-</table>
+<div *ngIf="dashboard; else colecoes">
+    <p>Coleções:<br>{{qtdColecoes}}</p>
+    <p>Modelos:<br>{{qtdModelos}}</p>
+    <p>Orçamento Médio(R$)<br>{{orcamentoMedio | currency}}</p>
+    
+    <table>
+        <h3>Maiores Orçamentos</h3>
+        <tr>
+            <th>Coleção</th>
+            <th>Responsável</th>
+            <th>Modelos</th>
+            <th>Orçamentos</th>
+        </tr>
+        <tr *ngFor="let item of novaColecao | slice:0:5">
+            <td>{{item.nome}}</td>
+            <td>{{item.responsavel}}</td>
+            <td>{{item.qtdModelos}}</td>
+            <td>{{item.orcamento}}</td>
+        </tr>
+    </table>
+</div>
+
+<ng-template #colecoes>
+    <table>
+        <tr>
+            <th>Coleção</th>
+            <th>Responsável</th>
+            <th>Estação - Lançamento</th>
+            <th>Modelos</th>
+            <th>Orçamento</th>
+        </tr>
+        <tr *ngFor="let item of novaColecao | slice:0:5">
+            <td>{{item.nome}}</td>
+            <td>{{item.responsavel}}</td>
+            <td>{{item.ano}} {{item.season}}</td>
+            <td>{{item.qtdModelos}}</td>
+            <td>{{item.orcamento}}</td>
+        </tr>
+    </table>
+</ng-template>

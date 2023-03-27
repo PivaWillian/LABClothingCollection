@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ModelosService } from 'src/app/services/modelos.service';
+import { Modelos } from 'src/app/tipos/modelos';
 
 @Component({
   selector: 'app-model-table',
@@ -9,7 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ModelTableComponent {
   myForm!: FormGroup
   
-  constructor(private fb:FormBuilder){}
+  constructor(private fb:FormBuilder, private router:Router, private modelosService:ModelosService){}
   
   ngOnInit(){
     this.myForm = this.fb.group({
@@ -22,12 +25,12 @@ export class ModelTableComponent {
     })
   }
 
-  onSubmit(){
-    console.log(this.myForm.value.bordado);
-    console.log(this.myForm.value.estampa);
+  async onSubmit() {
+    const modelo: Modelos = this.myForm.value;
+    this.modelosService.setModelo(modelo).toPromise();
   }
 
   cancela(){
-
+    this.router.navigate(['/modelos']);
   }
 }

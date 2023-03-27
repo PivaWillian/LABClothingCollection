@@ -22,18 +22,16 @@ export class CadastramentoComponent {
       cnpj: ['', [Validators.required, Validators.minLength(14)]],
       email: ['', [Validators.required, Validators.email]],
       senha: ['', [Validators.required, Validators.minLength(8)]],
-      // confirmacao: ['', [Validators.required, Validators.minLength(8)]]
+      confirmacao: ['', [Validators.required, Validators.minLength(8)]]
     })
   }
 
-  onSubmit(){
-    this.criarUsuario();    
-  }
-
-  criarUsuario(){
-    const usuario:Users = this.myForm.value
-    this.userService.setUser(usuario).subscribe();
-    console.log(usuario);
+  async onSubmit(){
+    if (this.myForm.value.senha === this.myForm.value.confirmacao) {
+      const usuario: Users = this.myForm.value
+      await this.userService.setUser(usuario).toPromise();
+      this.realizaLogin();
+    }
   }
 
   realizaLogin(){

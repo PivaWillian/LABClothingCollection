@@ -4,12 +4,14 @@ import { Observable } from 'rxjs';
 import { Colecoes } from '../tipos/colecoes';
 import { environment } from 'src/environments/environment';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ColecoesService {
-  
-  constructor(private http:HttpClient) { }
+
+  constructor(private http: HttpClient) { }
+
 
   getColecoes(): Observable<Colecoes[]>{
     return this.http.get<Colecoes[]>(environment.Collection_Path);
@@ -24,7 +26,7 @@ export class ColecoesService {
   }
 
   setColecao(colecao:Colecoes):Observable<Colecoes>{
-    return this.http.post<Colecoes>(`${environment.Collection_Path}/${colecao.id}`, colecao);
+    return this.http.post<Colecoes>(`${environment.Collection_Path}`, colecao);
   }
 
   deleteColecao(id:Number):Observable<Colecoes>{

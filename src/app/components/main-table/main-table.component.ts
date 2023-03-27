@@ -7,17 +7,41 @@ import { Modelos } from 'src/app/tipos/modelos';
   templateUrl: './main-table.component.html',
   styleUrls: ['./main-table.component.scss']
 })
+
 export class MainTableComponent implements OnChanges{
 
   @Input() modelos!: Modelos[];
   @Input() colecoes: Colecoes[] = [];
-  novaColecao:any[] = [];
+  @Input() novaColecao: any[] = [];
+  qtdColecoes: number = 0;
+  qtdModelos: number = 0;
+  orcamentoMedio: number = 0
+  dashboard = false;
 
   ngOnChanges() {
-    if(this.colecoes){
+    if (this.colecoes) {
       this.ordenaValor();
-      this.contando();
+      this.contandoModelos();
+      this.totalColecoes();
+      this.totalModelos();
+      this.mediaOrcamento();
     }
+  }
+
+  totalColecoes() {
+    this.qtdColecoes = this.colecoes.length;
+  }
+
+  totalModelos() {
+    this.qtdModelos = this.modelos.length;
+  }
+
+  mediaOrcamento() {
+    let valorTotal = 0
+    for (let i = 0; i < this.colecoes.length; i++){
+      valorTotal += this.colecoes[i].orcamento;
+    }
+    this.orcamentoMedio = valorTotal / this.qtdColecoes;
   }
 
   ordenaValor() {
@@ -26,8 +50,8 @@ export class MainTableComponent implements OnChanges{
     }
   }
 
-  contando(){
-    // let colecoesModificada = [];
+  contandoModelos(){
+    // nao - let colecoesModificada = [];
     console.log(this.colecoes)
     for(let i=0; i < this.colecoes.length; i++){
       const modelosColecao = this.modelos.filter(q => q.colecao === this.colecoes[i].id)
@@ -38,7 +62,7 @@ export class MainTableComponent implements OnChanges{
       console.log(obj);
       this.novaColecao.push(obj);
     }
-    // this.novaColecao = colecoesModificada;
+    // nao this.novaColecao = colecoesModificada;
     console.log(this.novaColecao)
   }
   

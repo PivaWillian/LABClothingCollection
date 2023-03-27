@@ -18,7 +18,8 @@ import { CollectionTableComponent } from './components/collection-table/collecti
 import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
 import { EditarColecaoComponent } from './pages/editar-colecao/editar-colecao.component';
 import { CriarModeloComponent } from './pages/criar-modelo/criar-modelo.component';
-import { ModelTableComponent } from './components/model-table/model-table.component'
+import { ModelTableComponent } from './components/model-table/model-table.component';
+import { ModelosComponent } from './pages/modelos/modelos.component'
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ModelTableComponent } from './components/model-table/model-table.compon
     CriarColecaoComponent,
     EditarColecaoComponent,
     CriarModeloComponent,
-    ModelTableComponent
+    ModelTableComponent,
+    ModelosComponent
   ],
   imports: [
     BrowserModule,
