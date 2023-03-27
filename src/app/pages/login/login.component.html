@@ -1,16 +1,18 @@
-<div class="manual">
-    <img src="../../../assets/Fill-51.svg" alt="">
-    <h3>Sign In</h3>
-     <p>Insira suas credenciais para acessar a conta</p>
-    <form class="form" [formGroup]="myForm" (ngSubmit)="(onSubmit)">
-      <div class="form-group">
-        <input type="email" formControlName="email" />
-      </div>
-      <div>
-        <input type="password" formControlName="senha" />
-      </div>
-      <button type="submit" class="btn more">Entrar</button>
-    </form>
-    <p>Esqueceu sua senha?<button (click)="redefinirSenha()">Redefinir senha</button></p>
-    <p>Não possui cadastro?<button (click)="cadastrarUsuario()">Cadastre-se</button></p>
+<div class="page">
+    <img src="../../../assets/Fill-51.svg" alt="Logo Audaces">
+    <div class="square">
+      <h3>Sign In</h3>
+      <p>Insira suas credenciais para acessar a conta</p>
+      <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="email" formControlName="email" placeholder="Informe seu e-mail"/>
+        </div>
+        <div class="form-group">
+          <input type="password" formControlName="senha" placeholder="Informe sua senha"/>
+        </div>
+        <button type="submit" class="btn btn2">Entrar</button>
+      </form>
+    </div>
+    <p>Esqueceu sua senha? <button class="link" (click)="redefinirSenha()">Redefinir senha</button></p>
+    <p>Não possui cadastro? <button class="link" (click)="cadastrarUsuario()">Cadastre-se</button></p>
 </div>

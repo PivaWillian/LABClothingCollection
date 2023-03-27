@@ -1,18 +1,22 @@
-<div class="manual">
-    <ng-container *ngIf="recuperando; else alternativo">
-        <img src="../../../assets/Fill-51.svg" alt="">
+<div class="align">
+  <img src="../../../assets/Fill-51.svg" alt="Logo Audaces">
+  <div class="square">
+      <ng-container *ngIf="recuperando; else alternativo">
         <h3>Redefinir Senha</h3>
-         <p>Digite o e-mail associado à sua conta e enviaremos instruções para redefinir sua senha</p>
+        <p>Digite o e-mail associado à sua conta</p> 
+        <p>e enviaremos instruções para redefinir sua</p> 
+        <p class="last">senha.</p>
         <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <input type="email" formControlName="email" />
+            <input type="email" formControlName="email" placeholder="Informe seu e-mail"/>
           </div>
-          <button type="submit" class="btn">Enviar Recuperação</button>
+          <button type="submit">Enviar Recuperação</button>
         </form>
-    </ng-container>
+      </ng-container>
+  </div>
 </div>
 <ng-template #alternativo>
-    <img src="../../../assets/Fill-51.svg" alt="">
+    
     <h3>Redefinir Senha</h3>
     <p>Um link com a senha foi enviado para {{correio}}</p>
     <button class="btn" (click)="voltarLogin()">Ir para tela de login</button>

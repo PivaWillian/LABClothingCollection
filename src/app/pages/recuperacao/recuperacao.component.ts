@@ -16,7 +16,7 @@ export class RecuperacaoComponent {
 
   ngOnInit(){
     this.myForm = this.fb.group({
-      email: ['Informe seu e-mail', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
     })
   }
 
