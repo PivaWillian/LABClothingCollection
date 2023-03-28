@@ -19,15 +19,15 @@ export class ModelosService {
     return this.http.get<Modelos>(`${environment.Modelos_Path}/${id}`);
   }
 
-  editModelo(colecao:Modelos):Observable<Modelos>{
-    return this.http.put<Modelos>(`${environment.Modelos_Path}/colecoes/${colecao.id}`, colecao);
+  editModelo(modelo:Modelos):Observable<Modelos>{
+    return this.http.put<Modelos>(`${environment.Modelos_Path}/${modelo.id}`, modelo);
   }
 
-  setModelo(colecao:Modelos):Observable<Modelos>{
-    return this.http.post<Modelos>(`${environment.Modelos_Path}`, colecao);
+  setModelo(modelo:Modelos):Observable<Modelos>{
+    return this.http.post<Modelos>(`${environment.Modelos_Path}`, modelo);
   }
 
   deleteModelo(id:Number):Observable<Modelos>{
-    return  this.http.delete<Modelos>(`${environment.Modelos_Path}/colecoes/${id}`);
+    return  this.http.delete<Modelos>(`${environment.Modelos_Path}/${id}`);
   }
 }

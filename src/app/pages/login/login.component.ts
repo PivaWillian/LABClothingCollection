@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit{
         if(this.myForm.value.senha === value.senha){
           this.isLogged = true;
           localStorage.setItem('Logado', 'true');
+          this.route.navigate(['/home'])
         }
       }
     })

@@ -9,17 +9,17 @@ import { RecuperacaoComponent } from './pages/recuperacao/recuperacao.component'
 
 const routes: Routes = [
 
-  // { path: '', redirectTo: 'login', pathMatch: 'full'},
-  // {  path: '', component: ContentComponent, children:[
-  //   { path: 'login', component: LoginComponent },
-  //   { path: 'cadastro', component: CadastramentoComponent },
-  //   { path: 'recuperacao', component: RecuperacaoComponent}
-  // ]
-  // },
-  // {
-  //   path: '', component: FullComponent, children: [
-  //     {path: 'home', component: HomeComponent},
-  // ]}
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  {  path: '', component: ContentComponent, children:[
+    { path: 'login', component: LoginComponent },
+    { path: 'cadastro', component: CadastramentoComponent },
+    { path: 'recuperacao', component: RecuperacaoComponent}
+  ]
+  },
+  {
+    path: '', component: FullComponent, children: [
+      {path: 'home', component: HomeComponent},
+  ]}
 ];
 
 @NgModule({

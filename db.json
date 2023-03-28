@@ -1,13 +1,13 @@
 {
   "modelos": [
     {
-      "id": 1,
       "nome": "Modelo 1",
+      "tipo": "Calça",
       "colecao": 1,
       "responsavel": "Alguém",
-      "tipo": "Camiseta",
-      "bordado": false,
-      "estampa": true
+      "bordado": "true",
+      "estampa": "false",
+      "id": 1
     },
     {
       "id": 2,
@@ -15,17 +15,8 @@
       "colecao": 2,
       "responsavel": "Alguém",
       "tipo": "Bíquini",
-      "bordado": true,
-      "estampa": true
-    },
-    {
-      "nomeModelo": "willian",
-      "tipoModelo": "calcinha",
-      "selecionarColecao": "",
-      "responsavelModelo": "yan boiola",
       "bordado": "true",
-      "estampa": "false",
-      "id": 3
+      "estampa": "true"
     }
   ],
   "colecoes": [

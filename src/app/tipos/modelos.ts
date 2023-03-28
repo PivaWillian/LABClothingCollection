@@ -4,6 +4,6 @@ export interface Modelos {
     "colecao": number,
     "responsavel": string,
     "tipo": string,
-    "bordado": boolean,
-    "estampa": boolean
+    "bordado": string,
+    "estampa": string
 }
