@@ -2,8 +2,18 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+@font-face {
+    font-family: inter;
+    src: url(assets/Inter/static/Inter-Regular.ttf) format("opentype");
+  }
 
 body{
     width: 100vw;
     height: 100vh;
 }
+
+*{
+    font-family: inter;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

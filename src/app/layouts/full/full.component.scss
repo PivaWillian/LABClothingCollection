@@ -1,15 +1,29 @@
+.gridContainer{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 10% auto;
+}
+
 .cabecalho{
-    display: flex;
-    justify-content: flex-end;
+    grid-column: 1/3;
     border: solid 3px black;
 }
 
 .menu{
-    height: 100vh;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    float: left;
+    grid-row: 2/4;
     border: solid 3px black;
+}
+
+img{
+    width: auto;
+    height: 15px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.drop{
+    height: 50%;
 }

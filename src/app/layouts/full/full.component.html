@@ -1,13 +1,20 @@
-<header class="cabecalho">
-    <button>Alert</button>
-    <button>Photo</button>
-    <button>Dropdown</button>
-</header>
-<div class="menu">
-    <li>Dashboard</li>
-    <li>Coleções</li>
-    <li>Modelos</li>
-    <li>Obter Ajuda</li>
-    <li>Comentários</li>
+<div class="gridContainer">
+    <header class="cabecalho">
+    
+        <img src="../../../assets/notification-alert-icon.svg" alt="">
+        <button class="drop" mat-button [matMenuTriggerFor]="menu">Opções</button>
+        <mat-menu #menu="matMenu" yPosition="above">
+            <button mat-menu-item>Sair</button>
+            <button mat-menu-item>Mudar</button>
+            <button mat-menu-item>Configurações</button>
+        </mat-menu>
+    </header>
+    <div class="menu">
+        <li>Dashboard</li>
+        <li>Coleções</li>
+        <li>Modelos</li>
+        <li>Obter Ajuda</li>
+        <li>Comentários</li>
+    </div>
+    <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

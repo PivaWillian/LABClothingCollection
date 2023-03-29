@@ -2,7 +2,7 @@
     <img src="../../../assets/Fill-51.svg" alt="">
     <div class="square">
       <h3>Sign Up</h3>
-      <p>Insira seus dados para criar uma conta</p>
+      <p id="texto">Insira seus dados para criar uma conta</p>
       <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="form-item">
           <input type="text" formControlName="nome" placeholder="Nome">

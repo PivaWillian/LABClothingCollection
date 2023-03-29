@@ -12,14 +12,16 @@ import { CadastramentoComponent } from './pages/cadastramento/cadastramento.comp
 import { RecuperacaoComponent } from './pages/recuperacao/recuperacao.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainTableComponent } from './components/main-table/main-table.component';
-import{HttpClientModule} from '@angular/common/http';
+import{ HttpClientModule } from '@angular/common/http';
 import { ColecoesComponent } from './pages/colecoes/colecoes.component';
 import { CollectionTableComponent } from './components/collection-table/collection-table.component';
 import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
 import { EditarColecaoComponent } from './pages/editar-colecao/editar-colecao.component';
 import { CriarModeloComponent } from './pages/criar-modelo/criar-modelo.component';
 import { ModelTableComponent } from './components/model-table/model-table.component';
-import { ModelosComponent } from './pages/modelos/modelos.component'
+import { ModelosComponent } from './pages/modelos/modelos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { ModelosComponent } from './pages/modelos/modelos.component'
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
