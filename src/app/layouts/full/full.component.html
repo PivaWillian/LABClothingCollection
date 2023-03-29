@@ -1,8 +1,9 @@
 <div class="gridContainer">
     <header class="cabecalho">
-    
-        <img src="../../../assets/notification-alert-icon.svg" alt="">
-        <button class="drop" mat-button [matMenuTriggerFor]="menu">Opções</button>
+        <img id="full" src="../../../assets/Icon&Name.svg" alt="full">
+        <img id="alert" src="../../../assets/notification-alert-icon.svg" alt="alerta">
+        <img id="char" src="../../../assets/charizard-seeklogo.com.svg" alt="Dragãozão">
+        <button class="drop" mat-button [matMenuTriggerFor]="menu"><img id="arrow" src="../../../assets/arrow-down-338-svgrepo-com.svg" class="img-thumbnail" alt="Arrow"></button>
         <mat-menu #menu="matMenu" yPosition="above">
             <button mat-menu-item>Sair</button>
             <button mat-menu-item>Mudar</button>
@@ -10,11 +11,14 @@
         </mat-menu>
     </header>
     <div class="menu">
-        <li>Dashboard</li>
-        <li>Coleções</li>
-        <li>Modelos</li>
-        <li>Obter Ajuda</li>
-        <li>Comentários</li>
+        <label>Menu</label>
+        <ul class="option">
+            <li routerLink="/home" routerLinkActive="selected">Dashboard</li>
+            <li routerLink="/colecoes" routerLinkActive="selected">Coleções</li>
+            <li routerLink="/modelos" routerLinkActive="selected">Modelos</li>
+            <li>Obter Ajuda</li>
+            <li>Comentários</li>
+        </ul>
     </div>
-    <router-outlet></router-outlet>
+    <router-outlet class="position"></router-outlet>
 </div>

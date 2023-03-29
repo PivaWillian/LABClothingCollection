@@ -1,9 +1,15 @@
-<div *ngIf="dashboard; else colecoes">
-    <p>Coleções:<br>{{qtdColecoes}}</p>
-    <p>Modelos:<br>{{qtdModelos}}</p>
-    <p>Orçamento Médio(R$)<br>{{orcamentoMedio | currency}}</p>
+<div *ngIf="dashboard; else colecoes" class="total">
+    <div class="colecoes">
+        <p>Coleções:<br>{{qtdColecoes}}</p>
+    </div>
+    <div class="modelos">
+        <p>Modelos:<br>{{qtdModelos}}</p>
+    </div>
+    <div class="media">
+        <p>Orçamento Médio(R$)<br>{{orcamentoMedio | currency}}</p>
+    </div>
     
-    <table>
+    <table class="tabela">
         <h3>Maiores Orçamentos</h3>
         <tr>
             <th>Coleção</th>
@@ -21,7 +27,7 @@
 </div>
 
 <ng-template #colecoes>
-    <table>
+    <table class="col">
         <tr>
             <th>Coleção</th>
             <th>Responsável</th>

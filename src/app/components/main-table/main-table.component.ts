@@ -16,7 +16,7 @@ export class MainTableComponent implements OnChanges{
   qtdColecoes: number = 0;
   qtdModelos: number = 0;
   orcamentoMedio: number = 0
-  dashboard = false;
+  @Input() dashboard = false;
 
   ngOnChanges() {
     if (this.colecoes) {

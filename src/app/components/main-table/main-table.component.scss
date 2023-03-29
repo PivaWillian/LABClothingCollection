@@ -1,0 +1,41 @@
+.total{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: auto auto auto auto;
+}
+
+.tabela{
+    grid-row: 2/4;
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.colecoes{
+    border: 1px solid black;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.modelos{
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.media{
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+tr{
+    border-bottom: 1px solid;
+}
+
+.col{
+    grid-column: 1/4;
+    width: 95%;
+    height: 65%;
+    margin-right: 5%;
+    margin-left: 5px;
+    
+}

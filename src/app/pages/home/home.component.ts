@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit{
 
   models!: Modelos[];
   collections!: Colecoes[];
+  dashboard = true;
 
   constructor(private colecoesService: ColecoesService,
     private modelosService: ModelosService) { }
