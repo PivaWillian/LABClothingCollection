@@ -28,6 +28,6 @@ export class ColecoesComponent {
     });
   }  
   criarColecao(){
-    this.router.navigate(['/criar'])
+    this.router.navigate(['/editcol/criar']);
   }
 }

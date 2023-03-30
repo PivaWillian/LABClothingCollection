@@ -14,7 +14,7 @@ export class ModelosComponent implements OnInit {
   constructor(private modelosService: ModelosService, private router:Router) { }
 
   criarModelo() {
-    this.router.navigate(['/modelos/criar'])
+    this.router.navigate(['/editmodel/criar'])
   }
   
   ngOnInit(): void {

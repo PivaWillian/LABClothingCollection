@@ -1,29 +1,29 @@
 <div class="manual">
     <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
-      <div>
+      <div class="linha-um col-um">
         <input type="text" formControlName="nome" placeholder="Nome do Modelo">
       </div>
-      <div>
+      <div class="linha-um col-dois">
         <input type="text" formControlName="tipo" placeholder="Tipo do Modelo">
       </div>
-      <div>
+      <div class="linha-dois col-um">
         <label>Selecionar Coleção</label>
         <select formControName="colecao">
             <option value="1">Coleção 1</option>
             <option value="2">Coleção 2</option>
         </select>
-       </div>
-        <div>
+      </div>
+      <div class="linha-dois col-dois">
         <input type="text" formControlName="responsavel" placeholder="Responsável pelo modelo" />
       </div>
-      <div>
+      <div class="linha-tres col-um">
         <p>Possui bordado?</p>
         <label>Sim</label>
         <input type="radio" formControlName="bordado" value="true">
         <label>Não</label>
         <input type="radio" formControlName="bordado" value="false">
         </div>
-      <div>
+      <div class="linha-tres col-dois">
         <p>Possui estampa?</p>
         <label>Sim</label>
         <input type="radio" value="true" formControlName="estampa">
@@ -40,7 +40,7 @@
 
 <ng-template #edit>
   <button (click)="delete()">Excluir</button>
-  <button (click)="cancela()">Cancelar</button>
-  <button type="submit" class="btn">Atualizar</button>
+  <button (click)="cancela()" class="cancel">Cancelar</button>
+  <button type="submit" class="last">Atualizar</button>
 </ng-template>
 

@@ -16,7 +16,6 @@ import{ HttpClientModule } from '@angular/common/http';
 import { ColecoesComponent } from './pages/colecoes/colecoes.component';
 import { CollectionTableComponent } from './components/collection-table/collection-table.component';
 import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
-import { EditarColecaoComponent } from './pages/editar-colecao/editar-colecao.component';
 import { CriarModeloComponent } from './pages/criar-modelo/criar-modelo.component';
 import { ModelTableComponent } from './components/model-table/model-table.component';
 import { ModelosComponent } from './pages/modelos/modelos.component';
@@ -37,7 +36,6 @@ import { MatMenuModule } from '@angular/material/menu';
     ColecoesComponent,
     CollectionTableComponent,
     CriarColecaoComponent,
-    EditarColecaoComponent,
     CriarModeloComponent,
     ModelTableComponent,
     ModelosComponent

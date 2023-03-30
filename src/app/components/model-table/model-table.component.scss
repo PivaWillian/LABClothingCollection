@@ -1,0 +1,49 @@
+.manual{
+    height: 80vh;
+    width: 80vw;
+}
+
+.form{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 30% auto auto auto 20%;
+    grid-template-columns: 50% 50%;
+}
+
+.linha-um{
+    grid-row: 1/2;
+    align-self: flex-end;
+}
+
+.col-um{
+    grid-column: 1/2;
+}
+
+.col-dois{
+    grid-column: 2/3;
+}
+
+.linha-dois{
+    align-self: center;
+}
+
+button{
+    width: 35%;
+    height: 35%;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+}
+
+.last{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.cancel{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    justify-self: flex-end;
+}

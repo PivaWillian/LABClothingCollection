@@ -1,16 +1,18 @@
-<h1>Modelos</h1>
-<button (click)="criarModelo()">Criar Modelo</button>
-<table>
-    <tr>
-        <th>ModeloID</th>
-        <th>Nome do Modelo</th>
-        <th>Responsável</th>
-        <th>Coleção</th>
-    </tr>
-    <tr *ngFor="let item of modelos">
-        <td>{{item.id}}</td>
-        <td>{{item.nome}}</td>
-        <td>{{item.responsavel}}</td>
-        <td>{{item.colecao}}</td>
-    </tr>
-</table>
+<div class="size">
+    <h1>Modelos</h1>
+    <button (click)="criarModelo()">Criar Modelo</button>
+    <table class="tabela">
+        <tr>
+            <th>ModeloID</th>
+            <th>Nome do Modelo</th>
+            <th>Responsável</th>
+            <th>Coleção</th>
+        </tr>
+        <tr *ngFor="let item of modelos" routerLink="/editmodel/{{item.id}}">
+            <td>{{item.id}}</td>
+            <td>{{item.nome}}</td>
+            <td>{{item.responsavel}}</td>
+            <td>{{item.colecao}}</td>
+        </tr>
+    </table>
+</div>

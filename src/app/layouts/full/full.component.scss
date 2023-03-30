@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 15% auto;
     grid-template-rows: 10% auto auto;
+    background-color: rgba(214, 220, 233, 0.863);
 }
 
 .cabecalho{
@@ -11,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background-color: white;
 }
 
 .menu{
@@ -20,6 +22,8 @@
     grid-template-rows: auto auto auto;
     justify-items: center;
     align-content: center;
+    background-color: white;
+    border-top: none;
 }
 
 .option{

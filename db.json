@@ -1,19 +1,28 @@
 {
   "modelos": [
     {
-      "nome": "Modelo 1",
+      "id": 1,
+      "nome": "Zodíaco",
       "tipo": "Calça",
       "colecao": 1,
-      "responsavel": "Alguém",
+      "responsavel": "Yan",
       "bordado": "true",
-      "estampa": "false",
-      "id": 1
+      "estampa": "false"      
     },
     {
       "id": 2,
-      "nome": "Modelo 2",
+      "nome": "Peixinhos",
       "colecao": 2,
-      "responsavel": "Alguém",
+      "responsavel": "Pâmylla",
+      "tipo": "Bíquini",
+      "bordado": "true",
+      "estampa": "true"
+    },
+    {
+      "id": 3,
+      "nome": "Floral",
+      "colecao": 2,
+      "responsavel": "César",
       "tipo": "Bíquini",
       "bordado": "true",
       "estampa": "true"
@@ -22,7 +31,7 @@
   "colecoes": [
     {
       "id": 1,
-      "nome": "Menina Mulher",
+      "nome": "Festa",
       "responsavel": "Audaces",
       "marca": "Nike",
       "ano": 2010,
@@ -31,7 +40,7 @@
     },
     {
       "id": 2,
-      "nome": "Academia",
+      "nome": "Casamento",
       "responsavel": "Audaces",
       "marca": "Reebok",
       "ano": 2020,
@@ -39,13 +48,13 @@
       "orcamento": 9800
     },
     {
-      "nomeColecao": "willian",
-      "responsavel": "joaozinho",
-      "estacao": "inferno",
-      "marca": "tigor",
-      "orcamento": 10000,
-      "anoLancamento": 2089,
-      "id": 3
+      "id": 3,
+      "nome": "Academia",
+      "responsavel": "Audaces",
+      "marca": "Nike",
+      "ano": 2021,
+      "season": "Outono",
+      "orcamento": 9800
     }
   ],
   "users": [
