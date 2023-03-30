@@ -1,27 +1,35 @@
-.size{
+.fundo{
     height: 80vh;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 3% 24% 22% 24% 24% 3%;
     grid-template-rows: 15% 10% auto;
-    width: 80vw;
+    width: 85vw;
     
 }
 
 button{
-    grid-column: 4/5;
+    grid-column: 5/6;
     height: 50%;
+    width: 60%;
     border: none;
     background-color: blue;
     color: white;
+    justify-self: flex-end;
+    border-radius: 3px;
 }
 
 .tabela{
-    grid-column: 1/5;
+    grid-column: 2/6;
     grid-row: 3/4;
     text-align: center;
     background-color: white;
+    border-radius: 3px;
 }
 
 tr{
     border-bottom: 1px solid rgb(211, 206, 206);
+}
+
+h1{
+    grid-column: 2/3;
 }

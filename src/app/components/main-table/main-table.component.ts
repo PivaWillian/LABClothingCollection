@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { CalcService } from 'src/app/services/calc.service';
 import { Colecoes } from 'src/app/tipos/colecoes';
 import { Modelos } from 'src/app/tipos/modelos';
 
@@ -13,10 +14,13 @@ export class MainTableComponent implements OnChanges{
   @Input() modelos!: Modelos[];
   @Input() colecoes: Colecoes[] = [];
   @Input() novaColecao: any[] = [];
+  maisOutra: any[] = [];
   qtdColecoes: number = 0;
   qtdModelos: number = 0;
   orcamentoMedio: number = 0
   @Input() dashboard = false;
+
+  constructor(private calc:CalcService){}
 
   ngOnChanges() {
     if (this.colecoes) {
@@ -25,6 +29,8 @@ export class MainTableComponent implements OnChanges{
       this.totalColecoes();
       this.totalModelos();
       this.mediaOrcamento();
+      this.maisOutra = this.calc.counting(this.colecoes, this.modelos);
+      console.log(this.maisOutra);
     }
   }
 
@@ -65,5 +71,7 @@ export class MainTableComponent implements OnChanges{
     // nao this.novaColecao = colecoesModificada;
     console.log(this.novaColecao)
   }
+
+
   
 }

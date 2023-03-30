@@ -1,20 +1,26 @@
-.tela{
+.fundo{
     height: 80vh;
     display: grid;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 3%  auto auto 3%;
     grid-template-rows: 15% auto;
 
 }
 
 .botao{
     grid-column: 3/4;
-    width: auto;
     height: 50%;
+    width: 33%;
     background-color: blue;
     color: white;
     border: none;
+    justify-self: flex-end;
 }
 
 .table{
-    grid-column: 1/4;    
+    grid-column: 2/4;
+    background-color: white;
+}
+
+h1{
+    grid-column: 2/3;
 }

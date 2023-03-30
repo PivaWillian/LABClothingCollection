@@ -10,7 +10,7 @@ import { Modelos } from 'src/app/tipos/modelos';
   styleUrls: ['./model-table.component.scss'],
 })
 export class ModelTableComponent implements OnInit, DoCheck{
-  isNew = false;
+  isNew = true;
   myForm!: FormGroup;
   modelo!: Modelos;
   count: number = 0;

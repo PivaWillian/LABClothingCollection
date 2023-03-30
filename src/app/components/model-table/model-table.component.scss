@@ -1,11 +1,19 @@
 .manual{
     height: 80vh;
     width: 80vw;
+    
+    display: grid;
+    grid-template-rows: 10% auto;
+    grid-template-columns: 3% auto 3%;
 }
 
 .form{
+    grid-row: 2/3;
+    grid-column: 2/4;
     height: 100%;
     width: 100%;
+    border-radius: 5px;
+    background-color: white;
     display: grid;
     grid-template-rows: 30% auto auto auto 20%;
     grid-template-columns: 50% 50%;
@@ -18,10 +26,13 @@
 
 .col-um{
     grid-column: 1/2;
+    align-self: center!important;
+    margin-left: 10%;
 }
 
 .col-dois{
     grid-column: 2/3;
+    align-self: center!important;
 }
 
 .linha-dois{
@@ -38,12 +49,29 @@ button{
 }
 
 .last{
-    grid-column: 2/3;
-    grid-row: 4/5;
+    grid-column: 3/4;
+    width: 70%;
 }
 
 .cancel{
-    grid-column: 2/3;
-    grid-row: 4/5;
-    justify-self: flex-end;
+    grid-column: 1/2;
+    width: 70%;
+}
+
+.largura{
+    width: 80%!important;
+}
+
+.delete{
+    background-color: red;
+}
+
+.gridzinho{
+    display: grid;
+    grid-template-columns: auto 3% auto;
+    align-items: center;
+}
+
+.cancela{
+    margin-left: 10%;
 }

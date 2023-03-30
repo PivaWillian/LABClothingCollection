@@ -1,20 +1,32 @@
 <div class="manual">
     <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div class="linha-um col-um">
-        <input type="text" formControlName="nome" placeholder="Nome do Modelo">
+        <input type="text" formControlName="nome" placeholder="Nome do Modelo" class="largura form-control">
       </div>
       <div class="linha-um col-dois">
-        <input type="text" formControlName="tipo" placeholder="Tipo do Modelo">
+        
+        <select class="form-select largura" formControlName="tipo">
+          <!-- <option selected>Selecionar Tipo</option> -->
+          <option selected value="Bermuda">Bermuda</option>
+          <option value="Bíquini">Bíquini</option>
+          <option value="Bolsa">Bolsa</option>
+          <option value="Boné">Boné</option>
+          <option value="Calça">Calça</option>
+          <option value="Calçado">Calçado</option>
+          <option value="Camisa">Camisa</option>
+          <option value="Chapéu">Chapéu</option>
+          <option value="Saia">Saia</option>
+        </select>
       </div>
       <div class="linha-dois col-um">
-        <label>Selecionar Coleção</label>
-        <select formControName="colecao">
+        <select class="form-select largura" formControName="colecao">
+            <option selected>Selecionar Coleção</option>
             <option value="1">Coleção 1</option>
             <option value="2">Coleção 2</option>
         </select>
       </div>
       <div class="linha-dois col-dois">
-        <input type="text" formControlName="responsavel" placeholder="Responsável pelo modelo" />
+        <input type="text" formControlName="responsavel" placeholder="Responsável pelo modelo" class="largura form-control"/>
       </div>
       <div class="linha-tres col-um">
         <p>Possui bordado?</p>
@@ -32,15 +44,17 @@
       </div>
       
       <ng-container *ngIf="isNew; else edit">
-        <button (click)="cancela()">Cancelar</button>
+        <button class="cancela" (click)="cancela()">Cancelar</button>
         <button type="submit" class="btn">Salvar</button>
       </ng-container>
     </form>
 </div>
 
 <ng-template #edit>
-  <button (click)="delete()">Excluir</button>
-  <button (click)="cancela()" class="cancel">Cancelar</button>
-  <button type="submit" class="last">Atualizar</button>
+  <button class="delete col-um" (click)="delete()">Excluir</button>
+  <div class="gridzinho">
+    <button (click)="cancela()" class="cancel">Cancelar</button>
+    <button type="submit" class="last">Atualizar</button>
+  </div>
 </ng-template>
 
