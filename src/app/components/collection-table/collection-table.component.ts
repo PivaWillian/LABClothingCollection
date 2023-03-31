@@ -17,7 +17,7 @@ export class CollectionTableComponent implements DoCheck{
   colecao:any;
   colID!: number;
   count = 0;
-  isNew = false;
+  isNew = true;
 
   constructor(private fb: FormBuilder, private router: Router,
     private colecoesService: ColecoesService,
@@ -34,8 +34,11 @@ export class CollectionTableComponent implements DoCheck{
 
   ngOnInit(){
     this.colID = Number(this.active.snapshot.params['id']);
-    this.colecoesService.getColecao(this.colID)
-      .subscribe(data => this.colecao = data)
+    if (this.colID > 0) {
+      this.isNew = false
+      this.colecoesService.getColecao(this.colID)
+        .subscribe(data => this.colecao = data);
+    }
     this.myForm = this.fb.group({
       nome:['', [Validators.required]],
       responsavel:['', [Validators.required]],
@@ -54,9 +57,11 @@ export class CollectionTableComponent implements DoCheck{
     if(this.isNew){
       const colecao:Colecoes = this.myForm.value;
       await this.colecoesService.setColecao(colecao).toPromise();
+      this.router.navigate(['/colecoes']);
     } else{
       const colecao:Colecoes = this.myForm.value;
       await this.colecoesService.editColecao(colecao).toPromise();
+      this.router.navigate(['/colecoes']);
     }
     
   }

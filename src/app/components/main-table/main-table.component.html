@@ -37,7 +37,7 @@
             <th>Modelos</th>
             <th>Orçamento</th>
         </tr>
-        <tr *ngFor="let item of novaColecao | slice:0:5">
+        <tr *ngFor="let item of novaColecao | slice:0:5" routerLink="/editcol/{{item.id}}">
             <td>{{item.nome}}</td>
             <td>{{item.responsavel}}</td>
             <td>{{item.ano}} {{item.season}}</td>

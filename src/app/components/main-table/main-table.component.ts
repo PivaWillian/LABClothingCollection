@@ -13,8 +13,8 @@ export class MainTableComponent implements OnChanges{
 
   @Input() modelos!: Modelos[];
   @Input() colecoes: Colecoes[] = [];
+  
   novaColecao: any[] = [];
-  maisOutra: any[] = [];
   qtdColecoes: number = 0;
   qtdModelos: number = 0;
   orcamentoMedio: number = 0
@@ -24,54 +24,12 @@ export class MainTableComponent implements OnChanges{
 
   ngOnChanges() {
     if (this.colecoes) {
-      this.ordenaValor();
-      this.contandoModelos();
-      this.totalColecoes();
-      this.totalModelos();
-      this.mediaOrcamento();
-      this.maisOutra = this.calc.counting(this.colecoes, this.modelos);
-      console.log(this.maisOutra);
+      this.novaColecao = this.calc.counting(this.colecoes, this.modelos);
+      this.novaColecao = this.calc.ordenaValor(this.novaColecao);
+      this.qtdColecoes = this.calc.total(this.colecoes);
+      this.qtdModelos = this.calc.total(this.modelos);
+      this.orcamentoMedio = this.calc.mediaOrcamento(this.colecoes, this.qtdColecoes);
+      console.log(this.novaColecao);
     }
-  }
-
-  totalColecoes() {
-    this.qtdColecoes = this.colecoes.length;
-  }
-
-  totalModelos() {
-    this.qtdModelos = this.modelos.length;
-  }
-
-  mediaOrcamento() {
-    let valorTotal = 0
-    for (let i = 0; i < this.colecoes.length; i++){
-      valorTotal += this.colecoes[i].orcamento;
-    }
-    this.orcamentoMedio = valorTotal / this.qtdColecoes;
-  }
-
-  ordenaValor() {
-   if(this.colecoes){
-     this.colecoes.sort((a, b) => (a.orcamento > b.orcamento ? -1 : 1));
-    }
-  }
-
-  contandoModelos(){
-    // nao - let colecoesModificada = [];
-    console.log(this.colecoes)
-    for(let i=0; i < this.colecoes.length; i++){
-      const modelosColecao = this.modelos.filter(q => q.colecao === this.colecoes[i].id)
-      const obj = {
-        ...this.colecoes[i],
-        qtdModelos: modelosColecao.length
-      };
-      console.log(obj);
-      this.novaColecao.push(obj);
-    }
-    // nao this.novaColecao = colecoesModificada;
-    console.log(this.novaColecao)
-  }
-
-
-  
+  }    
 }

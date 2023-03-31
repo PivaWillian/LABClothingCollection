@@ -14,17 +14,23 @@ export class ModelTableComponent implements OnInit, DoCheck{
   myForm!: FormGroup;
   modelo!: Modelos;
   count: number = 0;
-  modelID: number = 0;
+  modelID!: number;
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private modelosService: ModelosService,
-    private active:ActivatedRoute
+    private active: ActivatedRoute,
+    
   ) {}
 
   ngOnInit() {
-    this.modelosService.getModelo(this.modelID).subscribe(data => this.modelo = data)
+    this.modelID = Number(this.active.snapshot.params['id']);
+    if (this.modelID > 0) {
+      this.isNew = false;
+      this.modelosService.getModelo(this.modelID)
+        .subscribe(data => this.modelo = data);
+    }
     this.myForm = this.fb.group({
       nome: ['', [Validators.required]],
       tipo: ['', [Validators.required]],
@@ -47,11 +53,14 @@ export class ModelTableComponent implements OnInit, DoCheck{
     if (this.isNew) {
       const modelo: Modelos = this.myForm.value;
       this.modelosService.setModelo(modelo).toPromise();
+      this.isNew = false;
+      this.router.navigate(['/modelos']);
     } else
     {
       const modelo: Modelos = this.myForm.value;
       modelo.id = this.modelo.id;
       await this.modelosService.editModelo(modelo).toPromise();
+      this.router.navigate(['/modelos']);
     }
   }
 

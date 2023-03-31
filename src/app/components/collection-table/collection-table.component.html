@@ -1,21 +1,21 @@
-<div class="manual">
+<div class="size">
     <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
-      <div>
-        <input type="text" formControlName="nome" placeholder="Nome da Coleção">
+      <div class="col-1 lin-1">
+        <input type="text" formControlName="nome" placeholder="Nome da Coleção" >
       </div>
-      <div>
-        <input type="text" formControlName="responsavel" placeholder="Responsável pela coleção">
+      <div class="lin-1 col-2">
+        <input type="text" formControlName="responsavel" placeholder="Responsável pela coleção" >
       </div>
-      <div>
-        <input type="text" formControlName="season" placeholder="Para qual estação">
+      <div class="col-1 lin-2">
+        <input type="text" formControlName="season" placeholder="Para qual estação" >
       </div>
-        <div>
+        <div class="col-2 lin-2">
         <input type="text" formControlName="marca" placeholder="Para qual marca está criando?" />
       </div>
-      <div>
-        <input type="number" formControlName="orcamento" placeholder="Qual o orçamento desta coleção?"/>
+      <div class="col-1 lin-3">
+        <input type="number" formControlName="orcamento" placeholder="Qual o orçamento desta coleção?" />
       </div>
-      <div>
+      <div class="col-2 lin-3">
         <input type="number" formControlName="ano" placeholder="Ano de lançamento">
       </div>
       <img src="../../../assets/image 1.svg" alt="roupas">

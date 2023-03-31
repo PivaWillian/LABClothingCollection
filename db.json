@@ -55,6 +55,15 @@
       "ano": 2021,
       "season": "Outono",
       "orcamento": 9800
+    },
+    {
+      "id": 4,
+      "nome": "Academia",
+      "responsavel": "Audaces",
+      "marca": "Nike",
+      "ano": 2021,
+      "season": "Outono",
+      "orcamento": 10000
     }
   ],
   "users": [
