@@ -10,7 +10,6 @@ import { Users } from 'src/app/tipos/users';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit{
-  public isLogged:boolean = false;
   usuarios!:Users[];
 
   myForm!: FormGroup;
@@ -32,7 +31,7 @@ export class LoginComponent implements OnInit{
     this.usuarios.forEach(value =>{
       if(this.myForm.value.email === value.email){
         if(this.myForm.value.senha === value.senha){
-          this.isLogged = true;
+          
           localStorage.setItem('Logado', 'true');
           this.route.navigate(['/home'])
         }

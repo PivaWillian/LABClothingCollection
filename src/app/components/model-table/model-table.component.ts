@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, DoCheck, Input, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModelosService } from 'src/app/services/modelos.service';
 import { Modelos } from 'src/app/tipos/modelos';
 
@@ -19,7 +19,8 @@ export class ModelTableComponent implements OnInit, DoCheck{
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private modelosService: ModelosService
+    private modelosService: ModelosService,
+    private active:ActivatedRoute
   ) {}
 
   ngOnInit() {
@@ -36,8 +37,8 @@ export class ModelTableComponent implements OnInit, DoCheck{
 
   ngDoCheck() {
     if (this.modelo && this.count === 0) {
-      console.log(this.modelo)
-      this.myForm.patchValue(this.modelo)
+      console.log(this.modelo);
+      this.myForm.patchValue(this.modelo);
       this.count++;
     }
   }

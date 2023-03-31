@@ -2,7 +2,10 @@
   <img src="../../../assets/Fill-51.svg" alt="Logo Audaces">
   <div class="square">
       <ng-container *ngIf="recuperando; else alternativo">
-        <h3>Redefinir Senha</h3>
+        <div class="topo">
+          <img src="../../../assets/arrow-left.svg" alt="Back" (click)="voltarLogin()" class="volta">
+          <h3 class="title">Redefinir Senha</h3>
+        </div>
         <p>Digite o e-mail associado à sua conta</p> 
         <p>e enviaremos instruções para redefinir sua</p> 
         <p class="last">senha.</p>

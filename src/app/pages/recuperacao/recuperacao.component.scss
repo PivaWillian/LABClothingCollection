@@ -15,10 +15,12 @@
     align-items: center;
     border-radius: 8px;
     background-color: white;
+    width: 20%;
+    height: 40%;
 }
 
 img{
-    transform: translateY(-20px);
+    transform: translateY(-30px);
 }
 
 .form-group{
@@ -44,4 +46,21 @@ p{
 
 input{
     border-radius: 3px;
+}
+
+.volta{
+    height: 40%;
+    align-self: flex-start;
+    cursor: pointer;
+    
+}
+
+.topo{
+    display: flex;
+    width: 70%;
+    height: 20%;
+}
+
+.title{
+    align-self: center;
 }

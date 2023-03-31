@@ -5,7 +5,7 @@
         <img id="char" src="../../../assets/charizard-seeklogo.com.svg" alt="Dragãozão">
         <button class="drop" mat-button [matMenuTriggerFor]="menu"><img id="arrow" src="../../../assets/arrow-down-338-svgrepo-com.svg" class="img-thumbnail" alt="Arrow"></button>
         <mat-menu #menu="matMenu" yPosition="above">
-            <button mat-menu-item>Sair</button>
+            <button mat-menu-item (click)="logOut()">Sair</button>
             <button mat-menu-item>Mudar</button>
             <button mat-menu-item>Configurações</button>
         </mat-menu>

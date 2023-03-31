@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ModelosComponent } from './pages/modelos/modelos.component';
 import { RecuperacaoComponent } from './pages/recuperacao/recuperacao.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
 
@@ -22,11 +23,11 @@ const routes: Routes = [
   },
   {
     path: '', component: FullComponent, children: [
-      { path: 'home', component: HomeComponent },
-      { path: 'colecoes', component: ColecoesComponent },
-      { path: 'modelos', component: ModelosComponent},
-      { path: 'editcol/:id', component: CriarColecaoComponent},
-      { path: 'editmodel/:id', component: CriarModeloComponent}
+      { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+      { path: 'colecoes', component: ColecoesComponent, canActivate: [AuthGuard] },
+      { path: 'modelos', component: ModelosComponent, canActivate: [AuthGuard] },
+      { path: 'editcol/:id', component: CriarColecaoComponent, canActivate: [AuthGuard]},
+      { path: 'editmodel/:id', component: CriarModeloComponent, canActivate: [AuthGuard]}
   ]}
 ];
 

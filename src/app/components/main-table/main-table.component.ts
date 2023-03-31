@@ -13,7 +13,7 @@ export class MainTableComponent implements OnChanges{
 
   @Input() modelos!: Modelos[];
   @Input() colecoes: Colecoes[] = [];
-  @Input() novaColecao: any[] = [];
+  novaColecao: any[] = [];
   maisOutra: any[] = [];
   qtdColecoes: number = 0;
   qtdModelos: number = 0;

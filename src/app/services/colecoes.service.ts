@@ -30,6 +30,6 @@ export class ColecoesService {
   }
 
   deleteColecao(id:Number):Observable<Colecoes>{
-    return  this.http.delete<Colecoes>(`${environment.Collection_Path}/colecoes/${id}`);
+    return  this.http.delete<Colecoes>(`${environment.Collection_Path}/${id}`);
   }
 }

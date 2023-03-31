@@ -1,13 +1,13 @@
 <div class="manual">
     <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div>
-        <input type="text" formControlName="nomeColecao" placeholder="Nome da Coleção">
+        <input type="text" formControlName="nome" placeholder="Nome da Coleção">
       </div>
       <div>
         <input type="text" formControlName="responsavel" placeholder="Responsável pela coleção">
       </div>
       <div>
-        <input type="text" formControlName="estacao" placeholder="Para qual estação">
+        <input type="text" formControlName="season" placeholder="Para qual estação">
       </div>
         <div>
         <input type="text" formControlName="marca" placeholder="Para qual marca está criando?" />
@@ -16,11 +16,21 @@
         <input type="number" formControlName="orcamento" placeholder="Qual o orçamento desta coleção?"/>
       </div>
       <div>
-        <input type="number" formControlName="anoLancamento" placeholder="Ano de lançamento">
+        <input type="number" formControlName="ano" placeholder="Ano de lançamento">
       </div>
-      <img src="" alt="roupas opções">
-      <button (click)="cancela()">Cancelar</button>
-      <button type="submit" class="btn">Salvar</button>
+      <img src="../../../assets/image 1.svg" alt="roupas">
+      <ng-container *ngIf="isNew; else edit">
+        <button (click)="cancela()">Cancelar</button>
+        <button type="submit" class="btn">Salvar</button>
+      </ng-container>
     </form>
 </div>
+
+<ng-template #edit>
+  <button class="delete" (click)="delete()">Excluir</button>
+  <div class="gridzinho">
+    <button (click)="cancela()" class="cancel">Cancelar</button>
+    <button type="submit" class="last">Atualizar</button>
+  </div>
+</ng-template>
 

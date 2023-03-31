@@ -7,7 +7,7 @@
       "colecao": 1,
       "responsavel": "Yan",
       "bordado": "true",
-      "estampa": "false"      
+      "estampa": "false"
     },
     {
       "id": 2,
@@ -65,23 +65,6 @@
       "cnpj": 73252786000145,
       "email": "joaozinho@joaozinho.com",
       "senha": "********"
-    },
-    {
-      "nome": "WILIAN",
-      "empresa": "WILIAN",
-      "cnpj": 94999999999999,
-      "email": "willian.piva@gmail.com",
-      "senha": "00000000",
-      "id": 2
-    },
-    {
-      "nome": "willian",
-      "empresa": "willian ",
-      "cnpj": 939999999999393,
-      "email": "willian.piva@gmail.com",
-      "senha": "01010101",
-      "confirmacao": "01010101",
-      "id": 3
     }
   ]
 }
