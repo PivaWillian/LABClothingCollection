@@ -74,6 +74,15 @@
       "cnpj": 73252786000145,
       "email": "joaozinho@joaozinho.com",
       "senha": "********"
+    },
+    {
+      "nome": "Willian dos Santos Piva",
+      "empresa": "Audaces",
+      "cnpj": 11222333000455,
+      "email": "willianpiva@audaces.com",
+      "senha": "aprovado",
+      "confirmacao": "aprovado",
+      "id": 2
     }
   ]
 }

@@ -4,23 +4,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(190, 243, 243);
+    background-color: #F2F5FF;
 }
 
 .square{
-    width: 270px;
+    width: 480px;
+    height: 570px;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: white;
-    border-radius: 4px;
+    justify-content: space-around;
+}
+
+.form-item>div{
+    width: 352px;
 }
 
 .form-item>input{
-    width: 200px;
-    margin-bottom: 4px;
-    border-radius: 3px;
-    border-width: 1px;
+    font-size: 13px;
 }
 
 .botao{
@@ -29,6 +31,7 @@
     color: white;
     width: 100%;
     border-radius: 3px;
+    height: 50px;
 }
 
 .link{
@@ -41,6 +44,26 @@
     transform: translateY(10px);
 }
 
+img{
+    transform: translateY(-40px);
+}
+
+.pass{
+    display: flex;
+    flex-direction: row;
+}
+
+.pass2{
+    width: 171px;
+}
+
+.form{
+    height: 295px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(-40px);
+}
 #texto{
-    text-align: center;
+    color: #B4B6C1;
 }

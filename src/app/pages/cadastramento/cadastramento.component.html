@@ -1,28 +1,30 @@
 <div class="centraliza">
-    <img src="../../../assets/Fill-51.svg" alt="">
+    <img src="../../../assets/Fill-51.svg" alt="Audaces Logo">
     <div class="square">
       <h3>Sign Up</h3>
       <p id="texto">Insira seus dados para criar uma conta</p>
       <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
-        <div class="form-item">
-          <input type="text" formControlName="nome" placeholder="Nome">
+        <div class="form-item form-group">
+          <input class="form-control" type="text" formControlName="nome" placeholder="Nome">
         </div>
-        <div class="form-item">
-          <input type="text" formControlName="empresa" placeholder="Empresa">
+        <div class="form-item form-group">
+          <input class="form-control" type="text" formControlName="empresa" placeholder="Empresa">
         </div>
-        <div class="form-item">
-          <input type="number" formControlName="cnpj" placeholder="CNPJ">
+        <div class="form-item form-group">
+          <input class="form-control" type="number" formControlName="cnpj" placeholder="CNPJ">
         </div>
-        <div class="form-item">
-          <input type="email" formControlName="email" placeholder="E-mail"/>
+        <div class="form-item form-group">
+          <input class="form-control" type="email" formControlName="email" placeholder="E-mail"/>
         </div>
-        <div class="form-item">
-          <input type="password" formControlName="senha" placeholder="Senha"/>
+        <div class="pass">
+          <div class="form-item form-group pass2">
+            <input class="form-control" type="password" formControlName="senha" placeholder="Senha"/>
+          </div>
+          <div class="form-item form-group pass2">
+            <input class="form-control" type="password" formControlName="confirmacao" placeholder="Confirme sua senha">
+          </div>
         </div>
-        <div class="form-item">
-          <input type="password" formControlName="confirmacao" placeholder="Confirme sua senha">
-        </div>
-        <button type="submit" class="botao">Entrar</button>
+        <button type="submit" class="botao">Cadastrar</button>
       </form>
     </div>
     <p class="final">Já possui uma conta?<button class="link" (click)="realizaLogin()">Realizar login</button></p>

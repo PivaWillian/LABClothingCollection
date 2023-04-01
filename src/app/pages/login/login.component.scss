@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(190, 243, 243);
+    background-color: #f2f5ff;
 }
 
 img{
@@ -13,28 +13,34 @@ img{
 }
 
 .square{
+    width: 480px;
+    height: 395px;
     border-radius: 8px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 35%;
+    justify-content: space-around;
+    
 }
 
 .form{
     display: flex;
     flex-direction: column;
+    width: 70%;
+    transform: translateY(-20px);
 }
 
 .form-group{
-    margin-top: 10px;
+    
+    margin-bottom: 16px;
 }
 
 .btn2{
-    background-color: blue;
+    background-color: #0073cf;
     color: white;
-    border-radius: 8px;
-    margin-top: 10px;
+    border-radius: 6px;
+    // margin-top: 10px;
 }
 
 .link{
@@ -44,3 +50,8 @@ img{
     cursor: pointer;
     color: blue;
 }
+
+.color1{
+    color: #b4b6c1;
+}
+
