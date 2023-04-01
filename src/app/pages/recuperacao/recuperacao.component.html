@@ -1,26 +1,25 @@
-<div class="align">
-  <img src="../../../assets/Fill-51.svg" alt="Logo Audaces">
+<div class="screen">
+  <img id="main" src="../../../assets/Fill-51.svg" alt="Logo Audaces">
   <div class="square">
-      <ng-container *ngIf="recuperando; else alternativo">
-        <div class="topo">
-          <img src="../../../assets/arrow-left.svg" alt="Back" (click)="voltarLogin()" class="volta">
-          <h3 class="title">Redefinir Senha</h3>
+    <ng-container *ngIf="recuperando; else alternativo">
+      <div class="topo">
+        <img src="../../../assets/arrow-left.svg" alt="Back" (click)="voltarLogin()" class="volta">
+        <h3 class="title">Redefinir Senha</h3>
+        <p>Digite o e-mail associado à sua conta<br> 
+          e enviaremos instruções para redefinir sua<br> 
+          senha.</p>
+      </div>
+      <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input class="form-control" type="email" formControlName="email" placeholder="Informe seu e-mail"/>
         </div>
-        <p>Digite o e-mail associado à sua conta</p> 
-        <p>e enviaremos instruções para redefinir sua</p> 
-        <p class="last">senha.</p>
-        <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <input type="email" formControlName="email" placeholder="Informe seu e-mail"/>
-          </div>
-          <button type="submit">Enviar Recuperação</button>
-        </form>
-      </ng-container>
+        <button type="submit">Enviar Recuperação</button>
+      </form>
+    </ng-container>
   </div>
 </div>
 <ng-template #alternativo>
-    
-    <h3>Redefinir Senha</h3>
-    <p>Um link com a senha foi enviado para {{correio}}</p>
-    <button class="btn" (click)="voltarLogin()">Ir para tela de login</button>
+  <h3>Redefinir Senha</h3>
+  <p>Um link com a senha foi enviado para {{correio}}</p>
+  <button class="btn" (click)="voltarLogin()">Ir para tela de login</button>
 </ng-template>
