@@ -29,7 +29,7 @@ export class MainTableComponent implements OnChanges{
       this.qtdColecoes = this.calc.total(this.colecoes);
       this.qtdModelos = this.calc.total(this.modelos);
       this.orcamentoMedio = this.calc.mediaOrcamento(this.colecoes, this.qtdColecoes);
-      console.log(this.novaColecao);
+      // console.log(this.novaColecao);
     }
   }    
 }

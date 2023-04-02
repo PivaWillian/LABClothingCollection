@@ -1,9 +1,9 @@
 .fundo{
-    height: 80vh;
+    height: 88vh;
     display: grid;
     grid-template-columns: 3% 24% 22% 24% 24% 3%;
-    grid-template-rows: 15% 10% auto;
-    width: 85vw;
+    grid-template-rows: 15% 5% 5% auto;
+    width: 100%;
     
 }
 
@@ -15,12 +15,13 @@ button{
     background-color: blue;
     color: white;
     justify-self: flex-end;
+    align-self: center;
     border-radius: 3px;
 }
 
 .tabela{
     grid-column: 2/6;
-    grid-row: 3/4;
+    grid-row: 3/5;
     text-align: center;
     background-color: white;
     border-radius: 3px;
@@ -32,4 +33,5 @@ tr{
 
 h1{
     grid-column: 2/3;
+    align-self: center;
 }

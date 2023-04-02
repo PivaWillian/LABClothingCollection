@@ -1,14 +1,7 @@
 .total{
     display: grid;
+    width: 100%;
     height: 100%;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-columns: auto auto auto auto;
-}
-
-.fundo{
-    height: 80vh;
-    width: 75vw;
-    display: grid;
     grid-template-columns: auto 3% auto 3% auto;
     grid-template-rows: 20% 10% auto;
 }
@@ -22,35 +15,36 @@
 }
 
 .colecoes{
-    width: 50%;
-    height: 50%;
-    
-    border-radius: 8px;
+    width: 80%;
+    height: 100%;
+    font-size: 35px;
+    border-radius: 20px;
     align-self: center;
     background-color: white;
 }
 
 .modelos{
     grid-column: 3/4;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 100%;
     align-self: center;
-
-    border-radius: 8px;
+    font-size: 35px;
+    border-radius: 20px;
     background-color: white;
 }
 
 .media{
     grid-column: 5/6;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 100%;
     align-self: center;
-    border-radius: 8px;
+    font-size: 35px;
+    border-radius: 20px;
     background-color: white;
 }
 
 tr{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid  #d9d9d9;
     text-align: center;
 }
 

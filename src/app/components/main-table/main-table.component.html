@@ -1,31 +1,28 @@
 <div *ngIf="dashboard; else colecoes" class="total">
-    <div class="fundo">
-        <div class="colecoes">
-            <p>Coleções:<br>{{qtdColecoes}}</p>
-        </div>
-        <div class="modelos">
-            <p>Modelos:<br>{{qtdModelos}}</p>
-        </div>
-        <div class="media">
-            <p>Orçamento Médio(R$)<br>{{orcamentoMedio | currency:'BRL'}}</p>
-        </div>
-        
-        <table class="tabela">
-            <h3>Maiores Orçamentos</h3>
-            <tr>
-                <th>Coleção</th>
-                <th>Responsável</th>
-                <th>Modelos</th>
-                <th>Orçamentos</th>
-            </tr>
-            <tr *ngFor="let item of novaColecao | slice:0:5" routerLink="/editcol/{{item.id}}">
-                <td>{{item.nome}}</td>
-                <td>{{item.responsavel}}</td>
-                <td>{{item.qtdModelos}}</td>
-                <td>{{item.orcamento}}</td>
-            </tr>
-        </table>
+    <div class="colecoes">
+        <p>Coleções:<br>{{qtdColecoes}}</p>
     </div>
+    <div class="modelos">
+        <p>Modelos:<br>{{qtdModelos}}</p>
+    </div>
+    <div class="media">
+        <p>Orçamento Médio(R$)<br>{{orcamentoMedio | currency:'BRL'}}  <img src="../../../assets/Frame 132.svg" alt="variacao"></p>
+    </div>
+    <table class="tabela">
+        <h3>Maiores Orçamentos</h3>
+        <tr>
+            <th>Coleção</th>
+            <th>Responsável</th>
+            <th>Modelos</th>
+            <th>Orçamentos</th>
+        </tr>
+        <tr *ngFor="let item of novaColecao | slice:0:5" routerLink="/editcol/{{item.id}}">
+            <td>{{item.nome}}</td>
+            <td>{{item.responsavel}}</td>
+            <td>{{item.qtdModelos}}</td>
+            <td>{{item.orcamento}}</td>
+        </tr>
+    </table>
 </div>
 
 <ng-template #colecoes>
