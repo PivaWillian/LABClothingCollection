@@ -4,13 +4,16 @@
 }
 
 .form{
-    height: 100%;
+    height: 95%;
     display: grid;
     grid-template-columns: 3% auto 3% auto 3%;
     grid-template-rows: 20% 20% 20% 30% 10%;
+    background-color: white;
 }
 
 .col-1{
+    align-self: center;
+    justify-self: center;
     grid-column: 2/3;
 }
 
@@ -19,6 +22,8 @@
 }
 
 .col-2{
+    align-self: center;
+    justify-self: flex-start;
     grid-column: 4/5;
 }
 
@@ -29,4 +34,72 @@
 img{
     grid-column: 2/5;
     grid-row: 4/5;
+    justify-self: center;
+    position: relative;
+    top: -30px;
+}
+
+input{
+    width: 380px;
+}
+
+.save{
+    grid-column: 4/5;
+    grid-row: 5/6;
+    width: 30%;
+    justify-self: center;
+    background-color: blue;
+    color: white;
+    border-radius: 6px;
+}
+
+.cancel{
+    grid-column: 4/5;
+    grid-row: 5/6;
+    width: 30%;
+    border: none;
+    background-color: #ebebeb;
+    border-radius: 6px;
+}
+
+.hole{
+    grid-column: 1/2;
+    grid-row: 1/6;
+    background-color: #f9f9f9;
+}
+
+.gridzinho{
+    grid-column: 4/5;
+    grid-row: 5/6;
+    width: 100%;
+}
+
+.delete{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    width: 30%;
+    justify-self: center;
+    background-color: red;
+    color: white;
+    border-radius: 6px;
+    border: none;
+}
+
+.cancel{
+    width: 30%;
+    height: 100%;
+    border-radius: 6px;
+    position: relative;
+    left: -15px;
+    
+}
+
+.last{
+    width:30%;
+    height: 100%;
+    border: none;
+    border-radius: 6px;
+    justify-self: center;
+    background-color: blue;
+    color: white;
 }

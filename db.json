@@ -26,6 +26,15 @@
       "tipo": "Bíquini",
       "bordado": "true",
       "estampa": "true"
+    },
+    {
+      "nome": "BabyShark",
+      "tipo": "Bíquini",
+      "colecao": 1,
+      "responsavel": "Loki",
+      "bordado": "false",
+      "estampa": "false",
+      "id": 4
     }
   ],
   "colecoes": [
@@ -64,6 +73,15 @@
       "ano": 2021,
       "season": "Outono",
       "orcamento": 10000
+    },
+    {
+      "nome": "Show",
+      "responsavel": "Yan",
+      "season": "Inverno",
+      "marca": "Nike",
+      "orcamento": 10000,
+      "ano": 2040,
+      "id": 5
     }
   ],
   "users": [

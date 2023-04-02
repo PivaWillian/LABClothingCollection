@@ -20,10 +20,11 @@
         </select>
       </div>
       <div class="linha-dois col-um">
-        <select class="form-select largura" formControName="colecao">
-            <option selected>Selecionar Coleção</option>
-            <option value="1">Coleção 1</option>
-            <option value="2">Coleção 2</option>
+        <select class="form-select largura" formControlName="colecao">
+            <option selected value="">Selecionar Coleção</option>
+            <ng-container *ngFor="let item of colecoes">
+              <option value="{{item.id}}">{{item.nome}}</option>
+            </ng-container>
         </select>
       </div>
       <div class="linha-dois col-dois">

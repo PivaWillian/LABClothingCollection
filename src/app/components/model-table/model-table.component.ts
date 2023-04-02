@@ -1,7 +1,9 @@
 import { AfterViewInit, Component, DoCheck, Input, OnChanges, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ColecoesService } from 'src/app/services/colecoes.service';
 import { ModelosService } from 'src/app/services/modelos.service';
+import { Colecoes } from 'src/app/tipos/colecoes';
 import { Modelos } from 'src/app/tipos/modelos';
 
 @Component({
@@ -15,13 +17,13 @@ export class ModelTableComponent implements OnInit, DoCheck{
   modelo!: Modelos;
   count: number = 0;
   modelID!: number;
+  @Input() colecoes!:Colecoes[];
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private modelosService: ModelosService,
     private active: ActivatedRoute,
-    
   ) {}
 
   ngOnInit() {
@@ -52,9 +54,11 @@ export class ModelTableComponent implements OnInit, DoCheck{
   async onSubmit() {
     if (this.isNew) {
       const modelo: Modelos = this.myForm.value;
+      console.log(this.myForm.value.colecao);
+      modelo.colecao = parseInt(this.myForm.value.colecao)
       this.modelosService.setModelo(modelo).toPromise();
       this.isNew = false;
-      this.router.navigate(['/modelos']);
+      // this.router.navigate(['/modelos']);
     } else
     {
       const modelo: Modelos = this.myForm.value;

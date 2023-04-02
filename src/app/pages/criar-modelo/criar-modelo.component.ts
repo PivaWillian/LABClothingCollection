@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ColecoesService } from 'src/app/services/colecoes.service';
+import { Colecoes } from 'src/app/tipos/colecoes';
 
 
 @Component({
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './criar-modelo.component.html',
   styleUrls: ['./criar-modelo.component.scss']
 })
-export class CriarModeloComponent {
-  title: string = 'Criar Modelo'
-  
+export class CriarModeloComponent implements OnInit{
+  colecoes!:Colecoes[];
+  constructor(private colecoesService:ColecoesService){}
+  ngOnInit(): void {
+    this.colecoesService.getColecoes().subscribe(data => this.colecoes = data);
+  }
+   
 
 }
