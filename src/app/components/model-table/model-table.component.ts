@@ -54,15 +54,15 @@ export class ModelTableComponent implements OnInit, DoCheck{
   async onSubmit() {
     if (this.isNew) {
       const modelo: Modelos = this.myForm.value;
-      console.log(this.myForm.value.colecao);
-      modelo.colecao = parseInt(this.myForm.value.colecao)
+      modelo.colecao = parseInt(this.myForm.value.colecao);
       this.modelosService.setModelo(modelo).toPromise();
       this.isNew = false;
-      // this.router.navigate(['/modelos']);
+      this.router.navigate(['/modelos']);
     } else
     {
       const modelo: Modelos = this.myForm.value;
       modelo.id = this.modelo.id;
+      modelo.colecao = parseInt(this.myForm.value.colecao);
       await this.modelosService.editModelo(modelo).toPromise();
       this.router.navigate(['/modelos']);
     }

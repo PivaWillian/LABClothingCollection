@@ -1,18 +1,18 @@
 {
   "modelos": [
     {
-      "id": 1,
       "nome": "Zodíaco",
       "tipo": "Calça",
-      "colecao": 1,
+      "colecao": 3,
       "responsavel": "Yan",
       "bordado": "true",
-      "estampa": "false"
+      "estampa": "false",
+      "id": 1
     },
     {
       "id": 2,
       "nome": "Peixinhos",
-      "colecao": 2,
+      "colecao": 4,
       "responsavel": "Pâmylla",
       "tipo": "Bíquini",
       "bordado": "true",
@@ -30,7 +30,7 @@
     {
       "nome": "BabyShark",
       "tipo": "Bíquini",
-      "colecao": 1,
+      "colecao": 5,
       "responsavel": "Loki",
       "bordado": "false",
       "estampa": "false",
